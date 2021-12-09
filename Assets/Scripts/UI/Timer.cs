@@ -5,9 +5,19 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    public float timeValue = 90;
+    public float timeValueMax = 90;
+    public float timeValue;
     public Text timeText;
 
+    public static Timer instance;
+
+
+
+    void Start()
+    {
+        instance = this;
+        timeValue = timeValueMax;
+    }
 
     void Update()
     {
